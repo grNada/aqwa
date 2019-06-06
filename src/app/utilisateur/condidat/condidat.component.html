@@ -1,0 +1,152 @@
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#"><strong class="free"><span>Free</span>Lancer</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/nosoffres">Nos Offres</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" routerLink="/connexion">Connexion</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/utilisateur">Inscription</a>
+            </li>
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <div class="display">
+    <div class="div"></div>
+<div class="container register">
+<div class="row">
+    <div class="col-md-3 register-left">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+        <h3>Bienvenue</h3>
+        <p>Vous avez 30 secondes pour prendre vous poste de rêve!</p>
+        <a href="/connexion" mdbBtn color="white" outline="true" class="wow fadeInDown waves-light" data-wow-delay="0.4s" mdbWavesEffect>Déja Inscrit</a>
+    </div> 
+<div class="col-md-9 register-right">
+ 
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" >
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="needs-validation" novalidate>
+        <h3 class="register-heading">Inscrire Freelancer</h3>
+        <div class="row register-form">
+            <div class="col-md-6">
+                <div class="row">
+                <div class="form-group">
+                        <label data-error="Required field!"><span class="etoile">*</span> nom d'utilisateur</label>
+                    <input type="text" class="form-control validate"  value="" name="username" ngModel />
+                    
+                </div>
+                  <div class="form-group" >
+                        <label data-error="Required email!"><span class="etoile">*</span> Email</label>
+                    <input type="email" class="form-control " id="validationTooltipEmail" placeholder="name@example.com" value="" name="email"  aria-describedby="validationTooltipEmailPrepend" ngModel #n=ngModel required/>
+                 
+                </div>
+                </div>
+                <div class="row">
+
+                <div class="form-group">
+                    <label [attr.data-error]="password.errors!=null?(password.errors.required?'Required field!':'Minimum 6 characters needed'):''"><span class="etoile">*</span>Votre Mot de passe</label>
+                    <input type="password" class="form-control"  value="" name="password" ngModel #password="ngModel"  minlength="6" maxlength="9" required/>
+                   </div>
+                   <div class="condition" *ngIf="password.errors!=null">cette champ comporte au moins 6 caractères (lettres majuscules, minuscules, des chiffres)</div>
+                   
+                
+                <div class="form-group">
+                    <input type="password" class="form-control"  placeholder="Confirm Password *"  name="Confirmer Mot de passe" value="" ngModel />
+                </div>
+                </div>
+                
+                 <div class="form-group">
+                        <label data-error="Invalid cv!"><span class="etoile">*</span> Votre CV</label>
+                    <input type="file" class="form-control" value="" name="cv" ngModel required/>
+                    
+               
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                <div class="form-group">
+                        <label data-error="Invalid gouvernorat!"><span class="etoile">*</span> Votre Gouvernorat</label>
+                    <select class="form-control" name="gouvernorat" ngModel>
+                       <!-- <option class="hidden"  selected disabled >Gouvernorat</option>-->
+                        <option value="Monastir">Monastir</option>
+                        <option value="Nabeul">Nabeul</option>
+                        <option value="Sfax">Sfax</option>
+                        <option value="Sidi Bouzid">Sidi Bouzid</option>
+                        <option value="Siliana">Siliana</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Tataouine">Tataouine</option>
+                        
+                        <option value="Tunis">Tunis</option>
+                        <option value="Zaghouan">Zaghouan</option>
+                        <option value="Ariana">Ariana</option>
+                        <option value="Béja">Béja</option>
+                        <option value="Ben Arous">Ben Arous</option>
+                        <option value="Bizerte">Bizerte</option>
+                        <option value="Gabès">Gabès</option>
+                        <option value="Gafsa">Gafsa</option>
+                        <option value="Jendouba">Jendouba</option>
+                        <option value="Kairouan">Kairouan</option>
+                        <option value="Kasserine">Kasserine</option>
+                        <option value="Kébili">Kébili</option>
+                        <option value="Le Kef">Le Kef</option>
+                        <option value="Mahdia">Mahdia</option>
+                        <option value="La Manouba">La Manouba</option>
+                        <option value="Médenine">Médenine</option>
+                    </select>
+                </div>
+                </div>
+                <div class="row">
+               <div class="form-group">
+                        <label data-error="Invalid tel!">Votre Telephone</label>
+                    <input type="number" minlength="8" maxlength="8" name="tel" class="form-control"  value="" name="tel" ngModel/>
+                </div>
+                <div class="form-group">
+                    <div class="maxl">
+                        <label class="radio inline"> 
+                            <input type="radio" name="sexe" value="femme" ngModel checked>
+                            <label> Femme</label>
+                        </label>
+                        <label class="radio inline"> 
+                            <input type="radio" name="sexe" value="homme">
+                            <label> Homme</label>
+                        </label>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="form-group">
+                    <label data-error="Invalid competence!"><span class="etoile">*</span> Votre Compétence</label>
+                  <input type="text" class="form-control" value="" name="competence" ngModel required/>
+                </div>
+                <div class="form-group">
+                        <label data-error="Invalid datenaissance!">Votre Date naissance</label>
+                    <input type="date" class="form-control" value="" name="datenaissance" ngModel/>
+                </div>
+                </div> 
+            
+              <input type="submit" class="btnRegister"  [disabled]="!form.valid"/>
+            </div> 
+        </div>
+       </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+

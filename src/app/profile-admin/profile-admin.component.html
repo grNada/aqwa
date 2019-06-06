@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#"><strong class="free"><span>Free</span>Lancer</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <ul class="navbar-nav mr-auto" >
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/nosoffres">Nos Offres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/connexion">Connexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/utilisateur">Inscription</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <div class="md-form my-0">
+                <a class="Deconnexion" href="/loga"><i class="fa fa-user-circle" aria-hidden="true"></i> Deconnexion</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--exemple tab -->
+  <table class="table table-hover">
+   
+  </table>
+<div class="Table">
+  <div class="row mb-4">
+      <div class="col-md-9 Tfreelancer" >
+          <div class="card">
+              <div class="card-body">
+                  <div class="">
+                      <h2>FreeLancer</h2>
+                      <table class="table table-hover">
+                          <thead class="blue-grey lighten-4">
+                              <tr>
+                                  <th>ID</th>
+                                  <th>Username</th>
+                                  <th>Email</th>
+                                  <th>Tel</th>
+                                  <th>Date de naissance</th>
+                                  <th>Gouvernorat</th>
+                                  <th>Compétance</th>
+                                  <th>sexe</th>
+                                  <th>Modifier</th>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                    <tr *ngFor="let C of listCondidat">
+                                            <td>{{C.id_personne}}</td>
+                                            <td>{{C.username}}</td>
+                                            <td>{{C.email}}</td>
+                                            <td>{{C.tel}}</td>
+                                            <td>{{C.datenaissance}}</td>
+                                            <td>{{C.gouvernorat}}</td>
+                                            <td>{{C.competence}}</td>
+                                            <td>{{C.sexe}}</td>
+                                      <!--<td (click)="populateForm(emp)">[{{emp.EMPCode}}]-{{emp.FullName}}</td>
+                                      <td (click)="populateForm(emp)">{{emp.Position}}</td>
+                                      <td (click)="populateForm(emp)">{{emp.Mobile}}</td>-->
+                                      <td>
+                                        <button (click)="onDeleteC(C.id_personne)" class="btn btn-sm btn-outline-danger">Desactivé</button><br>
+                                   
+                                    </td>
+                                    </tr>    
+                                    <!--<td><button type="button" class="btn btn-success">Activé</button>
+                                       
+                                </tr>-->
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 mb-4 Tentreprise">
+            <div class="card">
+                <div class="card-body">
+                    <div class="">
+                        <h2>Entreprise</h2>
+                        <table class="table table-hover">
+                            <thead class="blue lighten-4">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom d'entrprise</th>
+                                    <th>Email</th>
+                                    <th>Tel</th>
+                                    <th>Date de naissance</th>
+                                    <th>Gouvernorat</th>
+                                    <th>Activité</th>
+                                    <th>Modifier</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr  *ngFor=" let E of listEntreprise ">
+                                    <td>{{E.id_entreprise}}</td>
+                                    <td>{{E.nom_entreprise}}</td>
+                                    <td>{{E.email}}</td>
+                                    <td>{{E.tel}}</td>
+                                    <td>{{E.datenaissance}}</td>
+                                    <td>{{E.gouvernorat}}</td>
+                                    <td>{{E.activite}}</td>
+                                    
+                                    <td><button (click)="onDeleteE(E.id_entreprise)" class="btn btn-sm btn-outline-danger">Desactivé</button></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>

@@ -1,0 +1,138 @@
+<header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+          <div class="container">
+            <a class="navbar-brand" href="#"><strong class="free"><span>Free</span>Lancer</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+              <ul class="navbar-nav mr-auto" >
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/nosoffres">Nos Offres</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" routerLink="/connexion">Connexion</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" routerLink="/utilisateur">Inscription</a>
+                </li>
+              </ul>
+             
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar -->
+    
+      </header>
+  <div class="display">
+      <div class="div"></div>
+<div class="container register">
+  <div class="row">
+      <div class="col-md-3 register-left">
+          <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+          <h3>Bienvenue</h3>
+          <a href="/connexion" mdbBtn color="white" outline="true" class="wow fadeInDown waves-light" data-wow-delay="0.4s" mdbWavesEffect>Déja Inscrit</a>
+      </div> 
+  <div class="col-md-9 register-right">
+   
+  <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h3 class="register-heading">Inscrire Entreprise</h3>  
+  
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
+         
+       <div class="row register-form">
+                <div class="col-md-6">
+                        <h5><p>Informations Personnelles</p></h5>
+           
+                    <label data-error="Required email!"><span class="etoile">*</span> Email</label>
+                <div class="form-group">
+                    <input type="email" class="form-control" value="" name="email" ngModel required/>
+                </div>
+                
+                <label data-error="Required password"><span class="etoile">*</span> Mot de passe </label>
+                <div class="form-group">
+                        <input type="password" class="form-control" value="" name="password"  minlength="6" maxlength="9" required/>
+                </div>
+                <div class="condition" *ngIf="password!=null">cette champ comporte au moins 6 caractères (lettres majuscules, minuscules, des chiffres)</div>
+                   
+                <div class="form-group">
+                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                </div>
+               
+                <div class="form-group">
+                    <div class="maxl">
+                        <label class="radio inline"> 
+                            <input type="radio" name="sexe" value="femme" ngModel checked>
+                            <label> Femme</label>
+                        </label>
+                        <label class="radio inline"> 
+                            <input type="radio" name="sexe" value="homme" ngModel>
+                            <label> Homme</label>
+                        </label>
+                    </div>
+                </div>
+                <label data-error="Required tel!"> Votre Telephone</label>
+                <div class="form-group">
+                    <input type="number" minlength="8" maxlength="8" name="tel" class="form-control" value="" name="tel" ngModel/>
+                </div>
+                
+                <label data-error="Required datenaissance!"> Date Naissance </label>
+                <div class="form-group">
+              <input type="date" class="form-control" placeholder="Date naissance *" value="" name="datenaissance" ngModel/>
+              </div>
+              
+              <label data-error="Required gouvernorat!"><span class="etoile">*</span> Votre Gouvernorat</label>
+              <div class="form-group">
+                  <select class="form-control" name="gouvernorat" ngModel required>
+                      <option class="hidden"  selected disabled >Gouvernorat</option>
+                      <option value="Monastir">Monastir</option>
+<option value="Nabeul">Nabeul</option>
+<option value="Sfax">Sfax</option>
+<option value="Sidi Bouzid">Sidi Bouzid</option>
+<option value="Siliana">Siliana</option>
+<option value="Sousse">Sousse</option>
+<option value="Tataouine">Tataouine</option>
+<option value="Tozeur">Tozeur</option>
+<option value="Tunis">Tunis</option>
+<option value="Zaghouan">Zaghouan</option>
+<option value="Ariana">Ariana</option>
+<option value="Béja">Béja</option>
+<option value="Ben Arous">Ben Arous</option>
+<option value="Bizerte">Bizerte</option>
+<option value="Gabès">Gabès</option>
+<option value="Gafsa">Gafsa</option>
+<option value="Jendouba">Jendouba</option>
+<option value="Kairouan">Kairouan</option>
+<option value="Kasserine">Kasserine</option>
+<option value="Kébili">Kébili</option>
+<option value="Kef">Le Kef</option>
+<option value="Mahdia">Mahdia</option>
+<option value="Manouba">La Manouba</option>
+<option value="Médenine">Médenine</option>
+                  </select>
+              </div>
+          </div>
+                         
+             <div class="col-md-6 entre">
+                    <h5><p>Informations Entreprise</p></h5>
+                    <label data-error="Required nom_entreprise!"><span class="etoile">*</span> Nom d'entreprise</label>
+                    <div class="form-group">
+                           <input type="text" class="form-control" value="" name="nom_entreprise" ngModel required/>
+                   </div>
+                    <label data-error="Required activite!"><span class="etoile">*</span> Activité</label>
+            <div class="form-group">
+                <input type="text" class="form-control"value="" name="activite" ngModel required/>
+            </div>
+            <input type="submit" class="btnRegister"  [disabled]="!form.valid"/>
+           </div>
+         </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>

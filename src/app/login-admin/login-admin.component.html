@@ -1,0 +1,93 @@
+<html lang="en">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#"><strong class="free"><span>Free</span>Lancer</strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+        </div>
+      </nav>
+      
+      
+    <body>
+
+        <header>
+        
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('assets/imgLog/log.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row mt-5">
+                  <!--Grid column-->
+                  <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+                    
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+                  
+                  <div class="col-md-6 col-xl-5 mb-4">
+                    
+                    <form [formGroup]="logForm"(ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                      <div class="card-body">
+                       
+                        <div class="text-center">
+                          <h3 class="white-text">
+                            <i class="fas fa-user white-text"></i> LogIn :</h3>
+                          <hr class="hr-light">
+                        </div>
+                       
+                        
+                        <div class="md-form">
+                          <i class="fas fa-envelope prefix white-text active"></i>
+                          <input type="email" id="form2" formControlName='email' class="white-text form-control" name="email" ngModel  required>
+                          <label for="form2" class="active">Your email</label>
+                        </div>
+                        <div class="md-form">
+                          <i class="fas fa-lock prefix white-text active"></i>
+                          <input type="password" formControlName='password' id="form4" class="white-text form-control" name="password" ngModel  minlength="6" maxlength="8" required>
+                          <label for="form4">Your password</label>
+                        </div>
+                        <div class="text-center mt-4">
+                          <button class="btn btn-indigo" type="submit" [disabled]="f.invalid">Sign up</button>
+                          <hr class="hr-light mb-3 mt-4">
+                          <div class="inline-ul text-center">
+                            <a class="p-2 m-2 tw-ic">
+                              <i class="fab fa-twitter white-text"></i>
+                            </a>
+                            <a class="p-2 m-2 li-ic">
+                              <i class="fab fa-linkedin-in white-text"> </i>
+                            </a>
+                            <a class="p-2 m-2 ins-ic">
+                              <i class="fas fa-instagram white-text"> </i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                    
+                  </div>
+               
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+       
+    </body>
+    <script>
+    // Animations init
+new WOW().init();
+</script>
+</html>

@@ -1,0 +1,82 @@
+.carousel{
+    background-size: 100%
+}
+
+header,
+ {
+  height: 60%;
+ 
+}
+.d-block{
+  
+  background-image: url("src/assets/imgAcc/backend.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+ background-position: center;
+}
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+.d-block{
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: black !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+.full-bg-img{
+  height: 500px;
+}
+span{
+  color: rgb(33, 199, 221);
+  text-decoration: overline;
+  text-transform: uppercase;
+  /*text-indent: 50px;  */
+  
+
+  
+}
+.free{
+  font-weight:bold;
+  font-family: fantasy;
+
+}
+.nav-link,.form-control{
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card-deck{
+  margin-top: 5%;
+  margin-left:2%;
+  margin-right: 2%
+}
+.card-img-top{
+  background-size: cover;
+width: 100%;
+height: 200px;
+}

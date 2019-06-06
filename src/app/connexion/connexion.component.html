@@ -1,0 +1,90 @@
+<header>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#"><strong class="free"><span>Free</span>Lancer</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/nosoffres">Nos Offres</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" routerLink="/connexion">Connexion</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/utilisateur">Inscription</a>
+            </li>
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+   
+
+  </header>
+<div class="Connex">
+<section class="form-elegant">
+
+
+<mdb-card>
+
+  <mdb-card-header class="info-color white-text text-center py-4">
+   
+      <strong>Auhentification</strong>
+   
+  </mdb-card-header>
+
+  
+  <mdb-card-body class="px-lg-5 pt-0">
+
+   
+    <form class="text-center" style="color: #757575;" (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+      <div class="form-row">
+        
+        <div class="col">
+          <div class="errorbalise" [innerHtml]="errorbalise"></div>
+          <div class="md-form">
+            <i class="fas fa-user"></i>
+            <input type="text"  class="form-control" #username ngModel name="email" required mdbInput>
+            <label >Nom d'utilisateur ou E_mail </label>
+          </div>
+        
+      
+
+    
+      <div class="md-form"><i class="fas fa-lock"></i>
+        <input type="password"  class="form-control" #password ngModel name="password" required mdbInput>
+        <label >Mot de passe</label>
+       
+      </div>
+    </div>
+  </div>
+      
+    <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+        type="submit" >se connecter</button>
+    </form>
+    
+<hr>
+<a  class="blue-text ml-1" href="">Mot de passe oublié</a>
+<p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> ou connecez-vous avec :</p>
+
+  <div class="row my-3 d-flex justify-content-center">
+    
+    <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f blue-text text-center"></i></button>
+   
+    <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter blue-text"></i></button>
+    
+    <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g blue-text"></i></button>
+  </div>
+  </mdb-card-body>
+
+</mdb-card>
+</section>
+</div>

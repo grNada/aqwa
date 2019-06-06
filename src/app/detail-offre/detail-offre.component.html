@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-md-10 offset-md-1">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <h1>Detail offre</h1>
+    <h2><span></span>{{annonce.name_annonceur}}</h2>
+    <div>
+      <h2>Description</h2>
+      <p><span>Date d'annonce </span>{{annonce.date}}</p>
+      <p>Les Compétences Demandé : {{annonce.description}}</p>
+    </div>
+    <br>
+  
+    <div>
+        <h2>Contact</h2>
+       
+        <p> <span> Phone </span> {{annonce.phone}}</p>
+        <p> <span>Email </span>{{annonce.email}}</p>
+      </div>
+      <hr>
+      <p> <span> Budget </span> {{annonce.budgee}}</p>
+      <p> <span>Durée </span>{{annonce.duree}}</p>
+      <br>
+      <button type="submit" class="btn btn-primary">Postuler</button>
+    </form>
+  </div>
+</div>

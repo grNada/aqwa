@@ -1,0 +1,48 @@
+.top-nav-collapse {
+    background-color: #78909c !important;
+  }
+.navbar:not(.top-nav-collapse) {
+    background: black !important;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+      background: #78909c !important;
+    }
+  }
+
+span{
+    color: rgb(33, 199, 221);
+    text-decoration: overline;
+    text-transform: uppercase;
+    /*text-indent: 50px;  */   
+  }
+  .free{
+    font-weight:bold;
+    font-family: fantasy;
+  
+  }
+  .nav-link,.form-control{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .Table{
+      margin-top: 10%
+  }
+  .Tfreelancer{
+      margin-left: 50px
+
+  }
+  .Tentreprise{
+      margin-left: 50px;
+      margin-top: 30px
+  }
+  .fa{
+      color: darkcyan;
+      font-size: 30px
+  }
+  .Deconnexion{
+      color: white;
+      font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }

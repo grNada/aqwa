@@ -1,0 +1,104 @@
+
+@media (max-width: 740px) {
+ html,
+ body,
+ header,
+.d-block{
+   height: 100vh;
+ }
+}
+header
+{
+ height: 60%;
+
+}
+.top-nav-collapse {
+ background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+ background: black !important;
+}
+
+@media (max-width: 991px) {
+ .navbar:not(.top-nav-collapse) {
+   background: #78909c !important;
+ }
+}
+
+h1 {
+ letter-spacing: 8px;
+}
+
+h5 {
+ letter-spacing: 3px;
+}
+
+.hr-light {
+ border-top: 3px solid #fff;
+ width: 80px;
+}
+.full-bg-img{
+ height: 500px;
+}
+span{
+ color: rgb(33, 199, 221);
+ text-decoration: overline;
+ text-transform: uppercase;
+ /*text-indent: 50px;  */
+ 
+
+ 
+}
+.free{
+ font-weight:bold;
+ font-family: fantasy;
+
+}
+.nav-link,.form-control{
+ font-weight: bold;
+ font-family: 'Times New Roman', Times, serif;
+}
+
+    .my-card{
+    margin: 3%;
+    //-webkit-column-count:10;
+    //-moz-column-count: 2;
+    //column-count: 1; 
+    }
+    .offre{
+        display: flex;
+        margin-top: 5%;
+        //border-spacing: 10px;
+        justify-content: space-between;
+    }
+    .Search{
+        display: flex;
+        margin-top: 10%;
+        margin-left: 20%;
+        //background-size:70px ;
+       
+    }
+    .col-sm-6{
+        padding: 20px
+    }
+    .col-sm-4{
+        margin-left: 30px
+    }
+input{
+    -moz-border-radius:20%;
+    -webkit-webkit: border radius 50%;
+   border-radius: 20%;
+   
+}
+form{
+    margin-left: 20%;border-spacing: 10px
+}
+.compet{
+    color: white;
+    background-color:  rgb(69, 143, 161);
+    //border-spacing: ;
+}
+.form-inline{
+    display: inline-flex
+}

@@ -1,0 +1,126 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#"><strong class="free"><span>Free</span>Lancer</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <ul class="navbar-nav mr-auto" >
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/nosoffres">Nos Offres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/connexion">Connexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/utilisateur">Inscription</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+           
+            <div class="md-form my-0">
+                <a class="Deconnexion" href="/discussion"> <i class="fa fa-comments" aria-hidden="true"></i> Message </a>
+          </div>
+          <div class="md-form my-0">
+                <a class="Deconnexion" href="/connexion"><i class="fa fa-user-circle" aria-hidden="true"></i> Deconnexion</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+      <form class="md-form img">
+          <div class="file-field">
+            <div class="mb-4">
+              <img src="https://image.freepik.com/photos-gratuite/jolie-jeune-femme-lunettes_23-2147678999.jpg" class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
+            </div>
+          </div>
+        </form>
+        <button href="#list-group" type="button" class="btn btn-link" ><h5>A propos :</h5></button>
+        <div class="list-group"  id="list-group" *ngFor=" let c of listeCondidat ">
+            <div *ngIf="c.email == email">
+            <p>Nom d'utilisateur: {{c.username}}</p>
+            <p>Email: {{c.email}}</p>
+            <p>Compétence: {{c.competence}}</p>
+            <p>CV: {{c.cv}}</p>
+            <p>Tel: {{c.tel}}</p>
+            <p>Gouvernorat: {{c.gouvernorat}}</p>
+            <p>Date de naissance: {{c.datenaissance}}</p>
+             
+             <p>
+                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                   Modifier Profile
+                 </button>
+               </p>
+              
+               <div class="collapse" id="collapseExample">
+                 <div class="card card-body">
+                     <form  #form="ngForm" (ngSubmit)="onSubmit(form)">
+                     <div class="form-row">
+                       <div class="col-md-4 mb-3">
+                         <label >Id</label>
+                         <input type="number" class="form-control " placeholder="id" name="id_personne" value="{{c.id_personne}}" ngModel >
+                        </div>
+                        <div class="col-md-4 mb-3">
+                         <label >Nom d'utilisateur</label>
+                         <input type="text" class="form-control " placeholder="Nom d'utilisateur" name="username" ngModel >
+                        </div>
+                       <div class="col-md-4 mb-3">
+                           <label >Email</label>
+                           <input type="email" class="form-control "  placeholder="Email" name="email" ngModel required>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                            <label >CV</label>
+                            <input type="text" class="form-control " placeholder="CV" name="cv" ngModel >
+                           </div>
+                         <div class="col-md-4 mb-3">
+                             <label >Tel</label>
+                             <input type="text" class="form-control "placeholder="Tel" name="tel" ngModel required>
+                            </div>
+                           <div class="col-md-4 mb-3">
+                               <label >Gouvernorat</label>
+                               <input type="text" class="form-control " placeholder="Gouvernorat" name="gouvernorat" ngModel >
+                              </div>
+                             <div class="col-md-4 mb-3">
+                                 <label >Compétence</label>
+                                 <input type="text" class="form-control" placeholder="Compétence" name="competence" ngModel >
+                           </div>
+                           <button class="btn btn-primary" type="submit">valider</button>
+                     </div>
+                     
+                     </form>
+               </div>
+                      
+         </div>
+        </div>
+                </div>
+             
+            
+              <div class="row layoutright">
+                  <div class="input-group md-form form-sm form-1 pl-0">
+                      <form class="form-inline active-purple-4">
+                          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                          <i class="fas fa-search" aria-hidden="true"></i>
+                        </form>
+                                   
+                    </div>
+                    <div class="card my-card" style="width: 18rem;" *ngFor=" let annonce of listejob " >
+                        <!--<img class="card-img-top" src="{{annonce.imgUrl}}" alt="Card image cap">-->
+                        <div class="card-body">
+                           <h2 class="card-title" name="name_annonceur">{{annonce.name_annonceur}}</h2>
+                          <h5 class="card-title" name="title">{{annonce.title}}</h5>
+                          <p class="card-text" name="description">Compétence :<span class="compet"> {{ annonce.description }} </span></p>
+                          <p class="card-text" name="budgee">Budget : {{ annonce.budgee }} </p>
+                          <p class="card-text" name="duree">Durée : {{ annonce.duree }} </p>
+                          
+                          <hr>
+                          <p class="card-text">Date D'annonce :{{annonce.date}}</p>
+                          <button type="button" class="btn btn-light">Postuler</button>
+                         
+                        </div>
+                      </div>
+                 </div>
+              
+ 

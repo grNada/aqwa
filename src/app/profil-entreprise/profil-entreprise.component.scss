@@ -1,0 +1,84 @@
+.top-nav-collapse {
+    background-color: #78909c !important;
+  }
+.navbar:not(.top-nav-collapse) {
+    background: black !important;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+      background: #78909c !important;
+    }
+  }
+
+span{
+    color: rgb(33, 199, 221);
+    text-decoration: overline;
+    text-transform: uppercase;
+    /*text-indent: 50px;  */   
+  }
+  .free{
+    font-weight:bold;
+    font-family: fantasy;
+  
+  }
+  .nav-link,.form-control{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .fa{
+      color: darkcyan;
+      font-size: 30px
+  }
+  .Deconnexion{
+      color: white;
+      font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  .list-group{
+    padding: 10%;
+   background-position: left;
+    color: black;
+    font-weight: bold;
+   
+  }
+
+
+.table1,{
+  padding: 10px;
+   background-position: left;
+    color: black;
+    font-weight: bold;
+}
+.table2{
+  padding: 10px;
+   background-position: left;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+.bh{
+  color: rgb(99, 172, 172);
+  font-weight: bold;
+}
+.NomProjet{
+  color: black;
+  font-weight: bold;
+}
+footer{
+  max-width: 100%;
+}
+.rounded-circle{
+  overflow:hidden;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;
+  width:150px;
+  height:150px;
+  }
+  .left{
+    margin-top: 10%
+  }
