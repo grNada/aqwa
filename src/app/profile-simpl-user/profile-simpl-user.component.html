@@ -5,20 +5,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-        <ul class="navbar-nav mr-auto" >
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/nosoffres">Nos Offres</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/connexion">Connexion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/utilisateur">Inscription</a>
-          </li>
-        </ul>
         <form class="form-inline">
            
             <div class="md-form my-0">
@@ -31,6 +17,7 @@
       </div>
     </div>
   </nav>
+  
       <form class="md-form img">
           <div class="file-field">
             <div class="mb-4">
@@ -61,31 +48,31 @@
                      <div class="form-row">
                        <div class="col-md-4 mb-3">
                          <label >Id</label>
-                         <input type="number" class="form-control " placeholder="id" name="id_personne" value="{{c.id_personne}}" ngModel >
+                         <input type="number" class="form-control " placeholder="id" name="id_personne" value="{{c.id_personne}}" [(ngModel)]="id_personne" >
                         </div>
                         <div class="col-md-4 mb-3">
                          <label >Nom d'utilisateur</label>
-                         <input type="text" class="form-control " placeholder="Nom d'utilisateur" name="username" ngModel >
+                         <input type="text" class="form-control " placeholder="Nom d'utilisateur" name="username" [(ngModel)]= "username">
                         </div>
                        <div class="col-md-4 mb-3">
                            <label >Email</label>
-                           <input type="email" class="form-control "  placeholder="Email" name="email" ngModel required>
+                           <input type="email" class="form-control "  placeholder="Email" name="email" [(ngModel)]="email" required>
                            </div>
                            <div class="col-md-4 mb-3">
                             <label >CV</label>
-                            <input type="text" class="form-control " placeholder="CV" name="cv" ngModel >
+                            <input type="file" class="form-control " placeholder="CV" name="cv" [(ngModel)]="cv" >
                            </div>
                          <div class="col-md-4 mb-3">
                              <label >Tel</label>
-                             <input type="text" class="form-control "placeholder="Tel" name="tel" ngModel required>
+                             <input type="text" class="form-control "placeholder="Tel" name="tel" [(ngModel)]="tel" required>
                             </div>
                            <div class="col-md-4 mb-3">
                                <label >Gouvernorat</label>
-                               <input type="text" class="form-control " placeholder="Gouvernorat" name="gouvernorat" ngModel >
+                               <input type="text" class="form-control " placeholder="Gouvernorat" name="gouvernorat" [(ngModel)]="gouvernorat" >
                               </div>
                              <div class="col-md-4 mb-3">
                                  <label >Compétence</label>
-                                 <input type="text" class="form-control" placeholder="Compétence" name="competence" ngModel >
+                                 <input type="text" class="form-control" placeholder="Compétence" name="competence" [(ngModel)]="competence" >
                            </div>
                            <button class="btn btn-primary" type="submit">valider</button>
                      </div>
@@ -100,14 +87,14 @@
             
               <div class="row layoutright">
                   <div class="input-group md-form form-sm form-1 pl-0">
-                      <form class="form-inline active-purple-4">
-                          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
-                          <i class="fas fa-search" aria-hidden="true"></i>
+                      <form class="form-group active-purple-4">
+                          <i class="fas fa-search" aria-hidden="true">
+                          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search by Compétence"  [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}"/>
+                          </i>
                         </form>
                                    
                     </div>
-                    <div class="card my-card" style="width: 18rem;" *ngFor=" let annonce of listejob " >
-                        <!--<img class="card-img-top" src="{{annonce.imgUrl}}" alt="Card image cap">-->
+                    <div class="card my-card" style="width: 18rem;" *ngFor=" let annonce of listejob | filterJob : searchTerm " >
                         <div class="card-body">
                            <h2 class="card-title" name="name_annonceur">{{annonce.name_annonceur}}</h2>
                           <h5 class="card-title" name="title">{{annonce.title}}</h5>

@@ -102,3 +102,24 @@ form{
 .form-inline{
     display: inline-flex
 }
+.rounded-circle{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:150px;
+    height:150px;
+    }
+    .fa{
+        color: darkcyan;
+        font-size: 17px;
+    }
+    .Deconnexion{
+      background-position: right;
+        color: white;
+        font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .left{
+        margin-top: 10%
+      }

@@ -15,6 +15,10 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { CondidatComponent } from './Utilisateur/condidat/condidat.component';
 import { EntrepriseComponent } from './Utilisateur/entreprise/entreprise.component';
 import { AuthGuard } from './auth.guard';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+
+import { SuiviProjetComponent } from './suivi-projet/suivi-projet.component';
+
 const routes: Routes = [
   {path:'' , redirectTo:'acceuile',pathMatch:'full'},
   {path: '' ,component:AcceuilComponent },
@@ -31,6 +35,9 @@ const routes: Routes = [
    {path: 'utilisateur' ,component: UtilisateurComponent},
    {path: 'condidat' ,component: CondidatComponent},
    {path: 'entreprise' ,component: EntrepriseComponent},
+   {path: 'forgetpassword' ,component: ForgetPasswordComponent},
+   {path: 'suiviprojet' ,component: SuiviProjetComponent},
+  
   
 ];
 @NgModule({
@@ -40,4 +47,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents=[AcceuilComponent, ConnexionComponent, LoginAdminComponent, ProfileAdminComponent,
   ProfileSimplUserComponent,ProfilEntrepriseComponent, NosOffresComponent,ChatComponent,DetailOffreComponent,  AjouterOffreComponent,
-  DiscussionComponent,UtilisateurComponent,CondidatComponent,EntrepriseComponent]  
+  DiscussionComponent,UtilisateurComponent,CondidatComponent,EntrepriseComponent,SuiviProjetComponent,ForgetPasswordComponent]  

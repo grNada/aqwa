@@ -103,7 +103,7 @@ export class UserService {
        }
    
      PutCondidat(dataCondidat : Condidat){
-       return this.http.put(this.rootURL+'/Job/'+dataCondidat.id_personne,dataCondidat);
+       return this.http.put(this.rootURL+'/Condidat/'+dataCondidat.id_personne,dataCondidat);
         
      }
      GetCondidat(id : number):Observable<any>{

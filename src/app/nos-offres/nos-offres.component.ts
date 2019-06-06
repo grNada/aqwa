@@ -5,6 +5,7 @@ import { ToastrService } from '../../../node_modules/ngx-toastr';
 import { NgForm } from '../../../node_modules/@angular/forms';
 import { Postuler } from '../module/postuler';
 
+
 @Component({
   selector: 'app-nos-offres',
   templateUrl: './nos-offres.component.html',
