@@ -5,7 +5,7 @@ import { Annonce } from './modules/annonces';
   name: 'filterJob'
 })
 export class FilterJobPipe implements PipeTransform {
-  transform(listejob: Annonce[], searchTerm:string): Annonce[]{
+  transform(listejob: Annonce[], searchTerm:string  ): Annonce[]{
 
     if (!listejob || !searchTerm){
         return listejob;
@@ -14,4 +14,5 @@ export class FilterJobPipe implements PipeTransform {
         listejob.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
         
 }
+
 }

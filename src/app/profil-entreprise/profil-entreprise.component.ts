@@ -64,11 +64,12 @@ export class ProfilEntrepriseComponent implements OnInit {
       this.resetForm(form);
       this.Service.refreshListCondidat()
     });}
-    public chartType: string = 'line';
+
+ public chartType: string = 'line';
 
   public chartDatasets: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40,90], label: 'premier candidat' },
-    { data: [28, 48, 40, 19, 86, 27, 80,100], label: 'deuxiéme candidat' }
+    { data: [28, 48, 80,100], label: 'deuxiéme candidat' }
   ];
 
   public chartLabels: Array<any> = ['semaine 1', 'semaine 2', 'semaine 3', 'semaine 4', 'semaine 5', 'semaine 6', 'semaine 7', 'semaine 8'];
@@ -91,4 +92,137 @@ export class ProfilEntrepriseComponent implements OnInit {
   };
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }
+
+  
+public Type: string = 'bar';
+
+public Datasets: Array<any> = [
+  { data: [65, 59, 100, 81], label: '1er freelance ' },
+];
+
+public Labels: Array<any> = ['Activité 1', 'Activité 2', 'Activité 3', 'Activité 4'];
+
+  public Colors: Array<any> = [
+    {
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 2,
+    },
+    {
+      backgroundColor: [
+        'rgba(255, 125, 158, 0.2)',
+        'rgba(3, 111, 184, 0.2)',
+        'rgba(255, 255, 137, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(126, 243, 243, 0.2)',
+        'rgba(255, 210, 115, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255, 125, 158, 1)',
+        'rgba(3, 111, 184, 1)',
+        'rgba(255, 255, 137, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(126, 243, 243, 1)',
+        'rgba(255, 210, 115, 1)'
+      ],
+      borderWidth: 2,
+    },
+    ];
+
+    public Options: any = {
+      responsive: true,
+        scales: {
+          xAxes: [{
+            stacked: true
+            }],
+          yAxes: [
+          {
+            stacked: true
+          }
+        ]
+      }
+    };
+    public Clicked(e: any): void { }
+    public Hovered(e: any): void { }
+    
+
+public Typ: string = 'bar';
+
+public Dataset: Array<any> = [
+  { data: [75, 80, 90, 100, 55], label: '1ére freelanc' },
+];
+
+public Label: Array<any> = ['Activite 1', 'Activite 2', 'Activite 3', 'Activite 4', 'Activite 5',];
+
+  public Color: Array<any> = [
+    {
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 2,
+    },
+    {
+      backgroundColor: [
+        'rgba(255, 125, 158, 0.2)',
+        'rgba(3, 111, 184, 0.2)',
+        'rgba(255, 255, 137, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(126, 243, 243, 0.2)',
+        'rgba(255, 210, 115, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255, 125, 158, 1)',
+        'rgba(3, 111, 184, 1)',
+        'rgba(255, 255, 137, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(126, 243, 243, 1)',
+        'rgba(255, 210, 115, 1)'
+      ],
+      borderWidth: 2,
+    },
+    ];
+
+    public Option: any = {
+      responsive: true,
+        scales: {
+          xAxes: [{
+            stacked: true
+            }],
+          yAxes: [
+          {
+            stacked: true
+          }
+        ]
+      }
+    };
+    public Click(e: any): void { }
+    public Hover(e: any): void { }
 }
+

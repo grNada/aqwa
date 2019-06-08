@@ -27,23 +27,48 @@
     </nav>
  </header>
  <div>
-   
+    <div class="offre">
+        <div class="col-sm-4 bloc left" >
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Spécialisation</h3>
+                <p class="card-text">Frontend - Chef de produit - Backend - </p>
+                <p class="card-text">chef de projet - Designe - Full Stack - </p>
+                <p class="card-text"> Mobile - Data Science - Web </p>
+                <hr width="50%" color="black" align=center>
+                <h3 class="card-title">Expérience</h3>
+                <p class="card-text">Expérimenté (3 à 6 ans) </p>
+                <p class="card-text">Senior (7+) </p>
+              </div>
+            </div>
+          </div>
     <div class="row Search">
+        <div class="row">
     <form class="form-inline active-cyan-4 row">
-         <div class="row">
+         
             <div class="col-xs-4">
-                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="QUOI? java, c#, Angular ... " aria-label="Search">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search by Compétence" aria-label="Search" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text cyan lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                            aria-hidden="true"></i></span>
+                      </div>
+                  </div>
             </div>
             <div class="col-xs-4">
-                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="OU ? Votre Gouvernorat?" aria-label="Search">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search by date" aria-label="Search"[(ngModel)]="searchDate" [ngModelOptions]="{standalone: true}">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text cyan lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                            aria-hidden="true"></i></span>
+                      </div>
+                  </div>
             </div>
-            <div class="col-xs-4">
-                <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-            </div>
-         </div>
+        
     </form>
-    
-    <div class="card my-card" style="width: 18rem;" *ngFor=" let annonce of listAnnonce " >
+  </div>
+    <div class="row">
+    <div class="card my-card" style="width: 18rem;" *ngFor=" let annonce of listAnnonce | filterJob : searchTerm" >
         <!--<img class="card-img-top" src="{{annonce.imgUrl}}" alt="Card image cap">-->
         <div class="card-body">
            <h2 class="card-title" name="name_annonceur">{{annonce.name_annonceur}}</h2>
@@ -59,4 +84,6 @@
          
         </div>
       </div>
+    </div>
   </div>
+</div>

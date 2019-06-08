@@ -12,9 +12,9 @@ import { ToastrService } from '../../../node_modules/ngx-toastr';
 })
 export class DetailOffreComponent implements OnInit {
 annonce: Annonce;
-postuler : Postuler;
+postuler : any=[];
   constructor(private router:ActivatedRoute,private Service :UserService ,private toastr: ToastrService) { }
-
+  
   ngOnInit() {
     this.router.params.subscribe(params=>{
       console.log(params);
@@ -31,6 +31,7 @@ postuler : Postuler;
     console.log(this.annonce)
 
     this.postuler=new Postuler();
+    this.postuler.id_personne=12;
     this.postuler.description=params.description;
     this.postuler.datePostulation=params.date;
     this.postuler.budgee=params.budgee;
@@ -39,11 +40,14 @@ postuler : Postuler;
    
   });
   }
-  onSubmit(form:NgForm){
-    console.log(form)
-    this.Service.PostPostuler(form.value).subscribe(res => {
+  
+  onSubmit(postuler){
+    console.log(postuler)
+    this.Service.PostPostuler(postuler.value).subscribe(res => {
+      console.log(res);
       this.toastr.success('Inserted successfully', 'EMP. Register');
       this.Service.GetE();
     });
-  }
+     }
+     
 }

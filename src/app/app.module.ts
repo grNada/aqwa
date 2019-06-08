@@ -12,12 +12,14 @@ import { ToastrModule } from 'ngx-toastr';
 import {FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 import { FilterJobPipe } from './filter-job.pipe';
+import { FilterJobDatePipe } from './filter-job-date.pipe';
 
 @NgModule({
   declarations: [
      AppComponent,
     routingComponents,
     FilterJobPipe,
+    FilterJobDatePipe,
     
   
   ],

@@ -14,6 +14,8 @@ import { Postuler } from '../module/postuler';
 export class NosOffresComponent implements OnInit {
   listAnnonce: Annonce[];
   listPostuler:any=[];
+  searchTerm:string;
+  searchDate :string;
   constructor(private Service : UserService,private toastr: ToastrService) { }
 
   ngOnInit() {   

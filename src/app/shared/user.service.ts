@@ -153,7 +153,7 @@ export class UserService {
         return this.http.get(this.rootURL+'/Entreprise/'+id)
       }
       // Postuler ****************************************
-      PostPostuler(dataPostuler : Entreprise){
+      PostPostuler(dataPostuler : Postuler){
         return this.http.post(this.rootURL+'/Postuler',dataPostuler);
        
        }

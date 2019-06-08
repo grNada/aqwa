@@ -5,7 +5,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-      
+      <ul class="navbar-nav mr-auto" >
+          
+      </ul>
       <form class="form-inline" style="position: left; margin-right:100px;margin-right: 0%">
           <div class="md-form my-0">
               <a class="Deconnexion" href="/ajouter"> <i class="fa fa-briefcase" aria-hidden="true"></i> Ajouter Offres </a>
@@ -20,7 +22,7 @@
     </div>
   </div>
 </nav>
-<div class="row left">
+<div class="row left" >
     <div class="col-xs-4">
             <form class="md-form img">
                 <div class="file-field">
@@ -34,12 +36,12 @@
     <div class="col-xs-4">
         <h5 class="bh">A Propos</h5>
         <div class="list-group" *ngFor="let e of listEntreprise">
-            <div *ngIf="e.email == email">
-             <p>Nom d'entreprise: {{listEntreprise.nom_entreprise}}</p>
-             <p>Email: {{listEntreprise.email}}</p>
-             <p>Tel: {{listEntreprise.tel}}</p>
-             <p>Gouvernorat: {{listEntreprise.gouvernorat}}</p>
-              <p>Activite: {{listEntreprise.activite}}</p>
+            <div *ngIf="e.id_entreprise==5">
+             <p>Nom d'entreprise: {{e.nom_entreprise}}</p>
+             <p>Email: {{e.email}}</p>
+             <p>Tel: {{e.tel}}</p>
+             <p>Gouvernorat: {{e.gouvernorat}}</p>
+              <p>Activite: {{e.activite}}</p>
               <p>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Modifier Profile
@@ -103,7 +105,7 @@
                       </tr>
                     </thead>
                     <tbody *ngFor=" let a of listeannonce ">
-                      <tr *ngIf="a.email == email">
+                      <tr *ngIf="a.id_user == 9">
                         <th scope="row">{{a.id}}</th>
                         <td>{{a.title}}</td>
                         <td> {{a.description}} </td>
@@ -157,6 +159,7 @@
   
     </div>  
     
+   
     <div style="display: block; width: 50% ; margin: 10%">
         <h5 class="bh">Suivire projet</h5>
         <p>Pourcentage d'avancement des projetés par semaines </p>
@@ -171,3 +174,34 @@
               (chartClick)="chartClicked($event)">
           </canvas>
         </div>
+<div class="row" style="margin-left:20px ;display: flex;margin: 10px;">
+        <div style="display: block ; width: 50% ; ">
+            <p>Pourcentage d'avancement de 1ére Freelance de projet <span style="font-weight: bold;color: black ;">Développeur Backend PHP</span> </p>
+            <canvas mdbChart
+                [chartType]="Type"
+                [datasets]="Datasets"
+                [labels]="Labels"
+                [colors]="Colors"
+                [options]="Options"
+                [legend]="true"
+                (chartHover)="Hovered($event)"
+                (chartClick)="Clicked($event)">
+            </canvas>
+          </div>
+          <div style="display: block ; width: 50% ;">
+              <p>Pourcentage d'avancement de 1ér Freelance de projet <span style="font-weight: bold;color: black ;">Développeur JEE</span> </p>
+              <canvas mdbChart
+                  [chartType]="Typ"
+                  [datasets]="Dataset"
+                  [labels]="Label"
+                  [colors]="Color"
+                  [options]="Option"
+                  [legend]="true"
+                  (chartHover)="Hover($event)"
+                  (chartClick)="Click($event)">
+              </canvas>
+            </div>
+          </div>     
+          
+          
+          

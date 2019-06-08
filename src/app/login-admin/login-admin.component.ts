@@ -38,8 +38,8 @@ export class LoginAdminComponent implements OnInit {
     console.log("svp remplire tt les champs")
     
     }
-    else if ((email=="nadazyneb@gmail.com")&&(password=="nadazeyneb")){
-      this.router.navigate(['/']);
+    else if ((email=="nadazeineb@gmail.com")&&(password=="nadazeineb")){
+      this.router.navigate(['/profiladmin']);
     }
    
     
